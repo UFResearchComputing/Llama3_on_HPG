@@ -20,7 +20,7 @@ It lets us specify the training settings for everything from `model_name` to `da
 
 ```python
 
-model_name: str="PATH/to/LLAMA 2/7B"
+model_name: str="PATH/to/LLAMA 3/8B"
 enable_fsdp: bool= False
 run_validation: bool=True
 batch_size_training: int=4
