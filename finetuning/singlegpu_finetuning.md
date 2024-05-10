@@ -1,5 +1,5 @@
 # Fine-tuning with Single GPU
-This recipe steps you through how to finetune a Llama 2 model on the text summarization task using the [samsum](https://huggingface.co/datasets/samsum) dataset on a single GPU.
+This recipe steps you through how to finetune a Llama 3 model on the text summarization task using the [samsum](https://huggingface.co/datasets/samsum) dataset on a single GPU.
 
 These are the instructions for using the canonical [finetuning script](./src/llama_recipes/finetuning.py) in the llama-recipes package.
 
