@@ -1,5 +1,5 @@
 # Fine-tuning with Multi GPU
-This recipe steps you through how to finetune a Llama 2 model on the text summarization task using the [samsum](https://huggingface.co/datasets/samsum) dataset on multiple GPUs in a single or across multiple nodes.
+This recipe steps you through how to finetune a Llama 3 model on the text summarization task using the [samsum](https://huggingface.co/datasets/samsum) dataset on multiple GPUs in a single or across multiple nodes.
 
 
 ## Requirements
@@ -63,9 +63,9 @@ torchrun --nnodes 1 --nproc_per_node 8 finetuning.py --enable_fsdp --low_cpu_fsd
 
 
 ## Running with different datasets
-Currently 3 open source datasets are supported that can be found in [Datasets config file](../src/configs/datasets.py). You can also use your custom dataset (more info [here](./datasets/README.md)).
+Currently 3 open source datasets are supported that can be found in [Datasets config file](./src/llama-recipes/configs/datasets.py). You can also use your custom dataset (more info [here](./datasets/README.md)).
 
-* `grammar_dataset` : use this [notebook](../src/datasets/grammar_dataset/grammar_dataset_process.ipynb) to pull and process the Jfleg and C4 200M datasets for grammar checking.
+* `grammar_dataset` : use this [notebook](./src/llama-recipes/datasets/grammar_dataset/grammar_dataset_process.ipynb) to pull and process the Jfleg and C4 200M datasets for grammar checking.
 
 * `alpaca_dataset` : to get this open source data please download the `aplaca.json` to `dataset` folder.
 
@@ -99,7 +99,7 @@ In case you are dealing with slower interconnect network between nodes, to reduc
 
 HSDP (Hybrid sharding Data Parallel) helps to define a hybrid sharding strategy where you can have FSDP within `sharding_group_size` which can be the minimum number of GPUs you can fit your model and DDP between the replicas of the model specified by `replica_group_size`.
 
-This will require to set the Sharding strategy in [fsdp config](../src/configs/fsdp.py) to `ShardingStrategy.HYBRID_SHARD` and specify two additional settings, `sharding_group_size` and `replica_group_size` where former specifies the sharding group size, number of GPUs that you model can fit into to form a replica of a model and latter specifies the replica group size, which is world_size/sharding_group_size.
+This will require to set the Sharding strategy in [fsdp config](./src/llama-recipes/configs/fsdp.py) to `ShardingStrategy.HYBRID_SHARD` and specify two additional settings, `sharding_group_size` and `replica_group_size` where former specifies the sharding group size, number of GPUs that you model can fit into to form a replica of a model and latter specifies the replica group size, which is world_size/sharding_group_size.
 
 ```bash
 
