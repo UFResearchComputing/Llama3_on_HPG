@@ -15,11 +15,8 @@
 #SBATCH --output=job-%j.out
 #SBATCH --error=job-%j.err
 
-module load nlp/1.3
+module load llama/3
 
 cd /data/ai/tutorial/Llama3_on_HPG/finetuning
 
-python finetuning.py --use_peft --peft_method lora --quantization \ 
-       --dataset samsum_dataset \
-       --model_name /data/ai/models/nlp/llama/models_llama3/Meta-Llama-3-8B-hf \
-       --output_dir /data/ai/tutorial/Llama3_on_HPG/finetuning/models/1gpu/samsum
+python finetuning.py --use_peft --peft_method lora --quantization --dataset samsum_dataset --model_name /data/ai/models/nlp/llama/models_llama3/Meta-Llama-3-8B-hf --output_dir /data/ai/tutorial/Llama3_on_HPG/finetuning/models/1gpu/samsum

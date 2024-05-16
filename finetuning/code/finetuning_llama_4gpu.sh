@@ -15,14 +15,8 @@
 #SBATCH --output=job-%j.out
 #SBATCH --error=job-%j.err
 
-module load nlp/1.3
+module load llama/3
 
 cd /data/ai/tutorial/Llama3_on_HPG/finetuning
 
-torchrun --nnodes 1 --nproc_per_node 4  finetuning.py \
-         --enable_fsdp  \
-         --model_name /data/ai/models/nlp/llama/models_llama3/Meta-Llama-3-8B-hf \
-         --use_peft --peft_method lora --dataset alpaca_dataset \
-         --save_model --dist_checkpoint_root_folder model_checkpoints \
-         --dist_checkpoint_folder fine-tuned --pure_bf16 \
-         --output_dir /data/ai/tutorial/Llama3_on_HPG/finetuning/models/4gpu/peft
+torchrun --nnodes 1 --nproc_per_node 4  finetuning.py --enable_fsdp --model_name /data/ai/models/nlp/llama/models_llama3/Meta-Llama-3-8B-hf --use_peft --peft_method lora --output_dir /data/ai/tutorial/Llama3_on_HPG/finetuning/models/4gpu/peft
