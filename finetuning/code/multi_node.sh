@@ -7,7 +7,7 @@
 #SBATCH --nodes=2
 #SBATCH --time=08:00:00               # Time limit hrs:min:sec
 #SBATCH --cpus-per-task=16            # Number of CPU cores per task
-#SBATCH --mem=200gb                   # Total memory limit
+#SBATCH --mem=400gb                   # Total memory limit
 #SBATCH --partition=gpu               # Specify partition
 #SBATCH --gres=gpu:a100:4             # Request 4 A100 GPUs per task
 #SBATCH --account=ufhpc               # Sepcify account
