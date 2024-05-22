@@ -17,6 +17,9 @@
 
 module load llama/3
 
+# Important Note: Please specify the path to your own directory.
+# Make sure to replace any placeholder paths with the actual directory path where you want to store or access your files.
+
 cd /data/ai/tutorial/Llama3_on_HPG/finetuning
 
 torchrun --nnodes 1 --nproc_per_node 4  finetuning.py --enable_fsdp --model_name /data/ai/models/nlp/llama/models_llama3/Meta-Llama-3-8B-hf --use_peft --peft_method lora --output_dir /data/ai/tutorial/Llama3_on_HPG/finetuning/models/4gpu/peft

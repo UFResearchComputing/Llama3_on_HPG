@@ -2,7 +2,7 @@
 
 #SBATCH --job-name=llama3-1gpu-alpaca
 #SBATCH --mail-type=ALL               # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=zhao.qian@ufl.edu # Where to send mail
+#SBATCH --mail-user=...@ufl.edu # Where to send mail
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
 #SBATCH --time=12:00:00               # Time limit hrs:min:sec
@@ -16,6 +16,9 @@
 #SBATCH --error=job-%j.err
 
 module load llama/3
+
+# Important Note: Please specify the path to your own directory.
+# Make sure to replace any placeholder paths with the actual directory path where you want to store or access your files.
 
 cd /data/ai/tutorial/Llama3_on_HPG/finetuning
 
