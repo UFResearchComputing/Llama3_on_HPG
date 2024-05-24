@@ -19,7 +19,7 @@ Availability: Llama 3 models are freely available for research and commercial pu
 
 For more details, you can check out the official [Llama 3 blog post](https://huggingface.co/blog/llama3) or this [article](https://ai.plainenglish.io/llama3-a-new-era-in-large-language-models-2270ca1d80c7).
 
-## Download Llama3
+## Download Llama 3
 
 In order to download the model weights and tokenizer, please visit the [Meta Llama website](https://llama.meta.com/llama-downloads/) and accept our License.
 
@@ -61,18 +61,22 @@ huggingface-cli download meta-llama/Meta-Llama-3-8B-Instruct --include "original
 
 You can follow the steps below to quickly get up and running with Llama 3 models. These steps will let you run quick inference on HiPerGator. All the LLama3 models have already been downloaded to `/data/ai/models/nlp/llama/models_llama3`. You can run the model on HPG via the command line using `ml nlp/1.3`, or in the Jupyter Notebook with the `nlp-1.3` kernels.
 
-* [01. Getting to know Llama_3](01_getting_start_Llama_3.ipynb): This session is to provide a guided tour of Llama3, including understanding different Llama 2 models, how access them on HPG, Generative AI and Chatbot architectures, prompt engineering, RAG (Retrieval Augmented Generation), Fine-tuning and more.
+* [01. Getting to know Llama_3](01_getting_start_Llama_3.ipynb): This session is to provide a guided tour of Llama3, including understanding different Llama 3 models, how access them on HPG, Generative AI and Chatbot architectures, prompt engineering, RAG (Retrieval Augmented Generation), Fine-tuning and more.
 
 * [02. Prompt Engineering with Llama_3](02_prompt_engineering_with_Llama_3.ipynb): This session interactive guide covers prompt engineering & best practices with Llama 3 user [Replicate API](https://replicate.com/meta/llama-2-70b-chat).
 
-* [03. Running_Llama_on_HF_transformers](03_Running_Llama_on_HF_transformers.ipynb): This session shows how to run Llama models with Hugging Face transformers
+* [03. Running_Llama_on_HF_transformers](03_Running_Llama_on_HF_transformers.ipynb): This session shows how to run Llama 3 models with Hugging Face transformers
+
+* [04. Deploy_Llama_3_with_TensorRT](04_Deploy_Llama_3_with_TensorRT.ipynb): This session shows how to deploy Llama 3 models with NVIDIA TensorRT-LLM.
+
+* [05. Inference_Llama_3_locally](05_Inference_Llama_3_locally.ipynb): This session shows how to run inference with Llama 3 models using the command line.
 
 ## Finetuning and Inference
 
-* If you insteaed in finetune Llama2 on single-GPU and multi-GPU setups, you can find recipes at [finetuning](./finetuning).
-* If you want to deploy Llama2 for inference locally and using model servers, you can find recipes at [inference](./inference).
+* If you insteaed in finetune Llama 3 on single-GPU and multi-GPU setups, you can find recipes at [finetuning](./finetuning).
+* If you want to deploy Llama3 for inference locally and using model servers, you can find recipes at [inference](./inference).
 
 For more examples, see the [Llama recipes repository](https://github.com/facebookresearch/llama-recipes).
 
 ## License  
-All rights are reserved by the [Meta Llama team](https://llama.meta.com/) Please refer to the [Meta Llama License file](LICENSE) and the Acceptable [Use Policy](USE_POLICY.md).
+All rights are reserved by the [Meta Llama team](https://llama.meta.com/) Please refer to the [Meta Llama License file](https://github.com/meta-llama/llama3/blob/main/LICENSE) and the Acceptable [Use Policy](https://github.com/meta-llama/llama3/blob/main/USE_POLICY.md).
