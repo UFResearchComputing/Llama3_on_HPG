@@ -7,7 +7,7 @@
 #SBATCH --nodes=2
 #SBATCH --time=08:00:00               # Time limit hrs:min:sec
 #SBATCH --cpus-per-task=32            # Number of CPU cores per task
-#SBATCH --mem=400gb                   # Total memory limit
+#SBATCH --mem=800gb                   # Total memory limit
 #SBATCH --partition=gpu               # Specify partition
 #SBATCH --gres=gpu:a100:8             # Request 4 A100 GPUs per task
 #SBATCH --account=ufhpc               # Sepcify account
@@ -39,7 +39,7 @@ fi
 export CUDA_LAUNCH_BLOCKING=0
 
 # Running the torchrun command
-srun $TORCHRUN_PATH --nproc_per_node=4 --nnodes=2 --rdzv_id=$RANDOM --rdzv_backend=c10d --rdzv_endpoint=$head_node_ip:29500 finetuning.py --enable_fsdp --use_peft --peft_method lora \
+srun $TORCHRUN_PATH --nproc_per_node=8 --nnodes=2 --rdzv_id=$RANDOM --rdzv_backend=c10d --rdzv_endpoint=$head_node_ip:29500 finetuning.py --enable_fsdp --use_peft --peft_method lora \
          --model_name /data/ai/models/nlp/llama/models_llama3/Meta-Llama-3-70B-hf \
          --output_dir /data/ai/tutorial/Llama3_on_HPG/finetuning/models/2nodes8gpus
 
