@@ -63,7 +63,7 @@ You can follow the steps below to quickly get up and running with Llama 3 models
 
 * [01. Getting to know Llama_3](01_getting_start_Llama_3.ipynb): This session is to provide a guided tour of Llama3, including understanding different Llama 3 models, how access them on HPG, Generative AI and Chatbot architectures, prompt engineering, RAG (Retrieval Augmented Generation), Fine-tuning and more.
 
-* [02. Prompt Engineering with Llama_3](02_prompt_engineering_with_Llama_3.ipynb): This session interactive guide covers prompt engineering & best practices with Llama 3 user [Replicate API](https://replicate.com/meta/llama-2-70b-chat).
+* [02. Prompt Engineering with Llama_3](02_prompt_engineering_with_Llama_3.ipynb): This session interactive guide covers prompt engineering & best practices with Llama 3 use [Replicate API](https://replicate.com/meta/llama-2-70b-chat).
 
 * [03. Running_Llama_on_HF_transformers](03_Running_Llama_on_HF_transformers.ipynb): This session shows how to run Llama 3 models with Hugging Face transformers
 
