@@ -61,7 +61,7 @@ huggingface-cli download meta-llama/Meta-Llama-3-8B-Instruct --include "original
 
 You can follow the steps below to quickly get up and running with Llama 3 models. These steps will let you run quick inference on HiPerGator. All the LLama3 models have already been downloaded to `/data/ai/models/nlp/llama/models_llama3`. You can run the model on HPG via the command line using `ml nlp/1.3`, or in the Jupyter Notebook with the `nlp-1.3` kernels.
 
-* [01. Getting to know Llama_3](01_getting_start_Llama_3.ipynb): This session is to provide a guided tour of Llama3, including understanding different Llama 3 models, how access them on HPG, Generative AI and Chatbot architectures, prompt engineering, RAG (Retrieval Augmented Generation), Fine-tuning and more.
+* [01. Getting to know Llama_3](01_Getting_to_know_Llama_3.ipynb): This session is to provide a guided tour of Llama3, including understanding different Llama 3 models, how access them on HPG, Generative AI and Chatbot architectures, prompt engineering, RAG (Retrieval Augmented Generation), Fine-tuning and more.
 
 * [02. Prompt Engineering with Llama_3](02_prompt_engineering_with_Llama_3.ipynb): This session interactive guide covers prompt engineering & best practices with Llama 3 use [Replicate API](https://replicate.com/meta/llama-2-70b-chat).
 
