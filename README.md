@@ -65,7 +65,7 @@ You can follow the steps below to quickly get up and running with Llama 3 models
 
 * [02. Prompt Engineering with Llama_3](02_prompt_engineering_with_Llama_3.ipynb): This session interactive guide covers prompt engineering & best practices with Llama 3 use [Replicate API](https://replicate.com/meta/llama-2-70b-chat).
 
-* [03. Running_Llama_on_HF_transformers](03_Running_Llama_on_HF_transformers.ipynb): This session shows how to run Llama 3 models with Hugging Face transformers
+* [03. Running_Llama_3_on_HF_transformers](03_Running_Llama_3_on_HF_transformers.ipynb): This session shows how to run Llama 3 models with Hugging Face transformers
 
 * [04. Deploy_Llama_3_with_TensorRT](04_Deploy_Llama_3_with_TensorRT.ipynb): This session shows how to deploy Llama 3 models with NVIDIA TensorRT-LLM.
 
